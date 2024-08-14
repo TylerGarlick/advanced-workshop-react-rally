@@ -1,5 +1,10 @@
 # Building a sample Restaurant Application
 
+## Resources
+
+Use this [repo](https://github.com/coryhouse/reactjsconsulting/issues) to see what lessons have been learned over the
+past 10 years.
+
 ## Initial Setup
 
 Use `food.ts` as the data and information that we will use.
@@ -66,9 +71,8 @@ const queryClient = new QueryClient({
 
 ### Zod
 
-Zod is more powerful than TypeScript.
-
-We create more Zod schemas instead of TypeScript types because they are more powerful and we can derive our schemas from
+Use [zod](https://zod.dev/) for validation. Zod is more powerful than TypeScript. We create more Zod schemas instead of
+TypeScript types because they are more powerful and we can derive our schemas from
 the Zod schema. This avoids repetition of our declarations.
 
 Use `Zod` or something similar to validate: forms, urls, and other parts of our application.
@@ -172,4 +176,44 @@ Session Storage versus Local Storage use with not risky and not public informati
 ### Routing
 
 Use the `react-router-dom` to create the `/` and the `/about` routes.
+
+### Memoization
+
+Use the `children` property before we apply the `memo` optimizations across our application. Children won't force a
+rerender when the application is.
+
+> Not very good reasons to use context anymore
+
+#### Zustand and Jotai
+
+Context does not have to be global. Use [zustand](https://docs.pmnd.rs/zustand/getting-started/introduction) instead of
+context. This is the essence of a basic redux library.  [jotai](https://jotai.org/docs/introduction) is similar to
+`zustand`. The setter is not protected state and that is the difference between `zustand`.
+
+### Tests
+
+#### 5 types of tests:
+
+1. Unit: Test 1 thing, alone
+2. Integration: TEst a few things , together
+3. End-to-end (e2e): Test that everything works together (run the app)
+4. Performance: Test that app is fast under load
+5. Contract: Test the interaction between 2 separate systems
+
+#### Tools for each testing type
+
+1. Unit: Jest, Vitest, NUnit, JUnit
+2. Integration: See #1 / #3
+3. End to end: playwright
+4. Contract: Pact
+5. Performance k6, JMeter
+
+### [react-switchboard](https://github.com/coryhouse/react-switchboard)
+
+Checkout [locatorjs](https://www.locatorjs.com/)
+
+https://overreacted.io/
+
+
+
 

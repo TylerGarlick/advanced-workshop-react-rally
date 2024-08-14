@@ -1,0 +1,13 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      name: "Burger",
+      image: "burger.jpg",
+      price: 8.99,
+      description:
+        "This ain't your average burger. Topped with our tangy cheddar cheese sauce, fresh lettuce, and tomato.",
+      tags: ["Lunch", "Dinner"],
+    }
+  ]
+}

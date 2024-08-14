@@ -27,3 +27,7 @@ function renderFoods() {
   )
 }
 ```
+
+> Try to co-locate related code.
+
+
